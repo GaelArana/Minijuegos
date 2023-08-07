@@ -83,7 +83,6 @@ br {
     padding: 30px;  
     background-color: #fff;
     justify-content: center;
-    text-align: center;
     border-radius: 8px;
     border: 5px solid #d400ff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -95,11 +94,11 @@ br {
 }
 
 .contenedor-reglas button {
+    display: flex;
     padding:5px;
     background-color: #af32e1;
-    margin-top: 20px;
+    margin: 20px auto;
     color: rgba(255, 255, 255, 0.907);
-    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     border: none;

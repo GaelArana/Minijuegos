@@ -7,39 +7,82 @@
     <link rel="stylesheet" href="piedra papel o tijera/main.css">
 </head>
 <body>
-    <header>
-        <h1>Piedra, papel o tijera</h1>
-    </header>
-    <main>
-        <p class="instrucciones" id="instrucciones">
-            El primero en llegar a 5 puntos gana.
-        </p>
-        <div class="marcador">
-            <p class="nombre nombre-jugador">Jugador</p>
-            <p class="nombre nombre-computadora">Computadora</p>
-            <p class="puntos">
-                <span id="puntos-usuario">0</span>
-                <span>-</span>
-                <span id="puntos-computadora">0</span>
-            </p>
-        </div>
-        <div class="elegi-tu-arma" id="elegi-tu-arma">
-            <h2>Elige tu arma para el próximo turno</h2>
-            <div class="armas">
-                <button class="arma" id="piedra🪨">🪨</button>
-                <button class="arma" id="papel📋">📋</button>
-                <button class="arma" id="tijera✂️">✂️</button>
+    <div class="reglas" id="reglas">
+        <div class="contenedor-reglas">
+            <h2>Reglas:</h2>
+            <p>Los jugadores cuentan juntos «1, 2, 3…, ¡piedra, papel o tijera!»
+            <br>Justo al acabar muestran todos al mismo tiempo una de sus manos, de modo que pueda verse el elemento que cada uno ha elegido:
+            <br>- Piedra: un puño cerrado.
+            <br>- Papel: todos los dedos extendidos, con la palma de la mano de lado, mirando hacia abajo o hacia arriba
+            <br>- Tijera: dedos índice y corazón extendidos y separados formando una «V».
+            <br>
+            <br>El objetivo es vencer al oponente seleccionando el arma que gana, según las siguientes reglas:
+            <br>- La piedra aplasta la tijera. (Gana la piedra.)
+            <br>- La tijera corta el papel. (Gana la tijera.)
+            <br>- El papel envuelve la piedra. (Gana el papel.)
+            <br>- En caso de empate (que dos jugadores elijan el mismo elemento o que tres jugadores elijan cada uno un objeto distinto), se juega otra vez
+            <div>
+                <button onclick="goBack()" id="volver">Volver al inicio</button>
             </div>
         </div>
-        <div class="mensaje disabled" id="mensaje">
-            <p>
-                Usaste <span class="eleccion" id="eleccion-usuario">papel📋</span><br>
-                y la computadora usó <span class="eleccion" id="eleccion-computadora">piedra🪨</span>
-            </p>
-            <p id="gana-punto">¡Ganaste un punto! 🔥</p>
+    </div>
+
+    <div class="historia" id="historia">
+        <div class="contenedor-historia">
+            <h2>Historia del Memorama:</h2>
+            <br>El juego de «piedra, papel y tijera» fue inventado en China. Según un libro llamado Wǔzázǔ (五雜俎 o 五雜組), escrito por Xiè Zhàozhì (謝肇淛) al final de la era Ming, los señores de la guerra del periodo Han tardío jugaban algo llamado shǒushìlìng (手勢令), que vendría a ser lo que se conoce como «piedra, papel y tijera».
+            <br>
+            <br>No hay registro del juego en Occidente sino hasta que se tuvo contacto directo con los asiáticos. Los chinos y coreanos usan la palabra tela con piedra y tijera, mientras que los japoneses emplean el vocablo papel, lo que sugiere que los occidentales habrían incorporado el juego desde Japón a finales del siglo xix. Su origen japonés deriva de las artes marciales en las que piedra es un ataque directo, tijeras es un ataque a los ojos o a la nariz y papel es un método de defensa.
+            <div>
+                <button onclick="goBack()" id="volver">Volver al inicio</button>
+            </div>
         </div>
-        <button class="btn disabled" id="reiniciar">Reiniciar juego</button>
-    </main>
+    </div>
+
+    <div class="container">
+    <div class="titulo">
+        <h1>Piedra, papel o tijera</h1>
+    </div>
+    <div class="titulo2">
+        <h4>Contra computadora</h4>
+    </div>
+        <div class="contenedor">
+            <main>
+                <p class="instrucciones" id="instrucciones">
+                    El primero en llegar a 5 puntos gana.
+                </p>
+                <div class="marcador">
+                    <p class="nombre nombre-jugador">Jugador</p>
+                    <p class="nombre nombre-computadora">Computadora</p>
+                    <p class="puntos">
+                        <span id="puntos-usuario">0</span>
+                        <span>-</span>
+                        <span id="puntos-computadora">0</span>
+                    </p>
+                </div>
+                <div class="elegi-tu-arma" id="elegi-tu-arma">
+                    <h2>Elige tu arma para el próximo turno</h2>
+                    <div class="armas">
+                        <button class="arma" id="piedra🪨">🪨</button>
+                        <button class="arma" id="papel📋">📋</button>
+                        <button class="arma" id="tijera✂️">✂️</button>
+                    </div>
+                </div>
+                <div class="mensaje disabled" id="mensaje">
+                    <p>
+                        Usaste <span class="eleccion" id="eleccion-usuario">papel📋</span><br>
+                        y la computadora usó <span class="eleccion" id="eleccion-computadora">piedra🪨</span>
+                    </p>
+                    <p id="gana-punto">¡Ganaste un punto! 🔥</p>
+                </div>
+                <button class="btn disabled" id="reiniciar">Reiniciar juego</button>
+            </main>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="rules" onclick="rules()">Reglas</button>
+        <button id="history" onclick="history()">Historia</button>
+    </div>
     <div class="menu">
         <button class="menu" onclick="location.href='index.html'" id="buttonMenu">Menú inicial</button>
     </div>

@@ -1,6 +1,9 @@
 let puntosUsuario = 0;
 let puntosPC = 0;
 
+const reglas = document.getElementById("reglas");
+const historia = document.getElementById("historia");
+
 let instrucciones = document.querySelector("#instrucciones");
 let contenedorPuntosUsuario = document.querySelector("#puntos-usuario");
 let contenedorPuntosPC = document.querySelector("#puntos-computadora");
@@ -52,11 +55,11 @@ function iniciarTurno(e) {
     if (puntosUsuario === 5 || puntosPC === 5) {
 
         if (puntosUsuario === 5) {
-            instrucciones.innerText = "🔥 ¡Ganaste el juego! 🔥"
+            instrucciones.innerText = "¡Ganaste el juego!"
         }
 
         if (puntosPC === 5) {
-            instrucciones.innerText = "😭 ¡La computadora ganó el juego! 😭"
+            instrucciones.innerText = "¡La computadora ganó el juego!"
         }
 
         elegiTuArma.classList.add("disabled");
@@ -70,17 +73,17 @@ function iniciarTurno(e) {
 function ganaUsuario() {
     puntosUsuario++;
     contenedorPuntosUsuario.innerText = puntosUsuario;
-    contenedorGanaPunto.innerText = "¡Ganaste un punto! 🔥"
+    contenedorGanaPunto.innerText = "¡Ganaste un punto!"
 }
 
 function ganaPC() {
     puntosPC++;
     contenedorPuntosPC.innerText = puntosPC;
-    contenedorGanaPunto.innerText = "¡La computadora ganó un punto! 😭"
+    contenedorGanaPunto.innerText = "¡La computadora ganó un punto!"
 }
 
 function empate() {
-    contenedorGanaPunto.innerText = "¡Empate! 😱"
+    contenedorGanaPunto.innerText = "¡Empate!"
 }
 
 function reiniciarJuego() {
@@ -96,3 +99,18 @@ function reiniciarJuego() {
 
     instrucciones.innerText = "El primero en llegar a 5 puntos gana."
 }
+
+function goBack(){
+    reglas.style.display = "none";
+    historia.style.display = "none";
+}
+
+function rules() {
+    reglas.style.display = "flex";
+}
+
+function history() {
+    historia.style.display = "flex";
+}
+
+goBack()
