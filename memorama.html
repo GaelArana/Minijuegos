@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="memorama/styles.css">
+    <title>Memorama - 2 Jugadores</title>
+</head>
+<body>
+    <div class="reglas" id="reglas">
+        <div class="contenedor-reglas">
+            <h2>Reglas:</h2>
+            <br>- Se colocan diferentes cartas boca abajo sobre una mesa de tal modo que no sea posible ver la imagen que se encuentra en ellas. 
+            <br>- Se revuelven. 
+            <br>- No se puede cambiar a las cartas de sitio.
+            <br>- Cada jugador deberá poner por turnos boca arriba dos cartas al azar, si las dos cartas tienen la misma figura el jugador tomará esas dos cartas las cuales le sumaran puntos y podrá automáticamente repetir el turno, pero si las dos cartas tienen diferentes figuras el jugador deberá volver a colocar las cartas boca abajo en el mismo sitio y cederá su turno. 
+            <br>- El próximo jugador deberá levantar nuevamente dos cartas, las últimas dos cartas que queden al final podrán ser recopiladas por cualquiera de los jugadores, una vez que las cartas se acaben cada jugador deberá contar las cartas acumuladas en el desarrollo del juego, solo el que tenga más cartas será el ganador del juego.
+            <div>
+                <button onclick="goBack()" id="volver">Volver al inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="historia" id="historia">
+        <div class="contenedor-historia">
+            <h2>Historia del Memorama:</h2>
+            <br>El suizo Heinrich Hurter ideó el juego para llevárselos a sus nietos en Londres; se trataba de cuadrados de cartón decorados con dibujos recortados de revistas. El hijo de Hurter, agregado militar en Londres, fascinado por el juego, lo ofreció a la editorial Otto Maier, como se llamaba Ravensburger en ese entonces. Cuando salió a la venta costaba 4 marcos con 80. <div>
+                <button onclick="goBack()" id="volver">Volver al inicio</button>
+            </div>
+        </div>
+    </div>
+    <button disabled id="turnoJugador" class="boton-chico" onclick="mostrarTurno()">Turno de Jugador</button>
+    <main>
+        <section class="section1">
+            <h1>MEMORAMA</h1>
+            <table>
+                <tr>
+                    <td><button id="0" onclick="destapar(0)"></button></td>
+                    <td><button id="1" onclick="destapar(1)"></button></td>
+                    <td><button id="2" onclick="destapar(2)"></button></td>
+                    <td><button id="3" onclick="destapar(3)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="4" onclick="destapar(4)"></button></td>
+                    <td><button id="5" onclick="destapar(5)"></button></td>
+                    <td><button id="6" onclick="destapar(6)"></button></td>
+                    <td><button id="7" onclick="destapar(7)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="8" onclick="destapar(8)"></button></td>
+                    <td><button id="9" onclick="destapar(9)"></button></td>
+                    <td><button id="10" onclick="destapar(10)"></button></td>
+                    <td><button id="11" onclick="destapar(11)"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="12" onclick="destapar(12)"></button></td>
+                    <td><button id="13" onclick="destapar(13)"></button></td>
+                    <td><button id="14" onclick="destapar(14)"></button></td>
+                    <td><button id="15" onclick="destapar(15)"></button></td>
+                </tr>
+            </table>
+        </section>
+        <section class="section2">
+            <h2 id="jugador1" class="estadisticas">Jugador 1: 0 pares</h2>
+            <h2 id="jugador2" class="estadisticas">Jugador 2: 0 pares</h2>
+            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+        </section>
+    </main>
+    <section class="section3">
+        <h2 id="ganador" class="estadisticas">Ganador: -</h2>
+        <button id="jugarDeNuevo" class="boton-chico" onclick="location.href='memorama.html'">Jugar de nuevo</button>
+    </section>
+    <div class="button-container">
+        <button id="rules" onclick="rules()">Reglas</button>
+        <button id="history" onclick="history()">Historia</button>
+    </div>
+    <div class="menu">
+        <button class="menu" onclick="location.href='index.html'" id="buttonMenu">Menú inicial</button>
+    </div>
+    <script src="memorama/main.js"></script>
+</body>
+</html>
